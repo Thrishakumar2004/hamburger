@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #90e695;
+    padding: 10px 30px;
+
+}
+
+nav .logo {
+    color: #716a83;
+    font-size:75px;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 35px;
+    color: #111111;
+    cursor: pointer;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu li {
+    margin: 0 10px;
+}
+
+nav .menu li a {
+    color: #cb4eeb;
+    text-decoration: none;
+    
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    align:center
+    align-items:center;
+}
+
+nav .menu li a .menu-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f7f4f4;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav input[type="checkbox"]:checked ~ .menu {
+        display: flex;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+}
